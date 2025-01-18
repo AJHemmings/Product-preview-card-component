@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+@import url('https://fonts.google.com/specimen/Montserrat');
 
 body {
   display: flex;
@@ -32,6 +33,7 @@ main {
 .product-details {
   margin-top: 50px;
   margin-left: 20px;
+  text-align: center; /* Center the text within the product-details */
 }
 
 .product {
@@ -56,7 +58,17 @@ footer {
   text-align: center;
 }
 
+.description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+
+.new-price {
+  color: hsl(158, 36%, 37%); /* Dark cyan */
+}
+
 .old-price {
+  font-size: 13px;
   text-decoration: line-through;
 }
 
@@ -88,4 +100,27 @@ footer {
     width: 300px; /* Adjust image size for desktop */
     height: auto; /* Maintain aspect ratio */
   }
+}
+
+button {
+  background-color: hsl(158, 36%, 37%); /* Dark cyan */
+  color: white; /* Ensure text is readable */
+  border: none;
+  padding: 15px 30px; /* Increase padding to make the button wider */
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
+  width: 100%; /* Make the button take the full width of its container */
+  max-width: 300px; /* Set a maximum width for the button */
+  margin: 0 auto; /* Center the button */
+}
+
+button::before {
+  content: url('images/icon-cart.svg'); /* Path to the icon-cart.svg */
+  display: inline-block;
+  width: 15px; /* Adjust width as needed */
+  height: 16px; /* Adjust height as needed */
 }
