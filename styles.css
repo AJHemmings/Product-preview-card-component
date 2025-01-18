@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Fraunces", serif;
+  background-color: hsl(30, 38%, 92%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.product-preview {
+  display: flex;
+  align-items: flex-start; /* Align items to the start */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Set the width to 50% of the viewport */
+  min-width: 300px; /* Ensure a minimum width for smaller screens */
+}
+
+.product-details {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.product {
+  width: 100%; /* Ensure the product image fits within the product-preview */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+}
+
+.product-pic {
+  width: 200px;
+  height: 400px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+/* Media query for mobile screens (375px) */
+@media (max-width: 375px) {
+  .product-preview {
+    flex-direction: column; /* Stack items vertically */
+    width: 90%; /* Adjust width for mobile */
+  }
+
+  .product-details {
+    margin-top: 20px;
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .product-pic {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Media query for desktop screens (1440px) */
+@media (min-width: 1440px) {
+  .product-preview {
+    width: 40%; /* Adjust width for desktop */
+  }
+
+  .product-pic {
+    width: 300px; /* Adjust image size for desktop */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
